@@ -1,3 +1,5 @@
+import './Layout.scss';
+
 import { Outlet } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../App';
@@ -10,8 +12,8 @@ const Layout = () => {
 
     return (
         <>
-        <header>
-            <span>Invoices</span>
+        <header className="header">
+            <div className="header_title">Invoices</div>
             {user ? <User /> : null}
         </header>
         <div>

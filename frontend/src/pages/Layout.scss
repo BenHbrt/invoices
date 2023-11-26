@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.3rem;
+    justify-content: center;
+    position: relative;
+
+    &_title {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+}

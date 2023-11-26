@@ -19,12 +19,9 @@ from django.urls import path, include
 from rest_framework import routers
 from invoices import views
 
-router = routers.DefaultRouter()
-router.register(r'clients', views.ClientView, 'clients')
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
+    path('api/' ,include('invoices.urls')),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken')),
 ]
