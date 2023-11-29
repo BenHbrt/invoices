@@ -1,9 +1,11 @@
 .header {
     display: flex;
     flex-direction: row;
-    margin-top: 0.3rem;
+    margin-top: 0.5rem;
     justify-content: center;
     position: relative;
+    height: 60px;
+    width: 100%;
 
     &_title {
         font-size: 3rem;

@@ -12,4 +12,15 @@ class Client(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def _str_(self):
+        return self.name
+    
+class Event(models.Model):
+    title = models.CharField(max_length=30)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    client_id = models.ForeignKey(Client, on_delete=models.CASCADE)
+    date = models.DateField()
+    duration = models.FloatField()
+    amount = models.FloatField()
+
+    def _str_(self):
         return self.title
